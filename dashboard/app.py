@@ -1,14 +1,17 @@
 import streamlit as st
 import yfinance as yf
 import pandas as pd
+import os
 import plotly.graph_objects as go
 import plotly.express as px
 from datetime import date
 
+
 @st.cache_data
 def get_nifty_200_tickers():
-   df = pd.read_csv("dashboard/nifty_200_tickers.csv")
- # Must be in same folder
+    base_path = os.path.dirname(__file__)
+    csv_path = os.path.join(base_path, "dashboard", "nifty_200_tickers.csv")
+    df = pd.read_csv(csv_path)
     return df
 
 # --- Page Config and Styling ---

@@ -12,7 +12,7 @@ def get_nifty_200_tickers():
 
 # --- Page Config and Styling ---
 st.set_page_config(
-    page_title="NIFTY 200 Stock Visualizer",
+    page_title="Interactive Stock Market Dashboard",
     page_icon="📈",
     layout="wide"
 )
